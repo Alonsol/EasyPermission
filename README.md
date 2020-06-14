@@ -62,9 +62,11 @@
     ```    
     
  ### 4.只申请权限，不需要回调 
+ 
     ``` kotlin
       .requestPermission()
     ```
+    
   ### 5.申请权限并返回结果 
     ``` kotlin
       .requestPermission(object : IPermissionResult {
@@ -79,7 +81,7 @@
     ``` 
     
     
-   ### 6.权限回调处理（开发者根据自己的业务做相应处理，这里这是示例c）
+   ### 6.权限回调处理（开发者根据自己的业务做相应处理，这里这是示例）
      ``` kotlin
       private fun showDeniedPermissionDialog(deniedPermissions: ArrayList<PermissionBean>) {
         val stringBuilder = StringBuilder()
