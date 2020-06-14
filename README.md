@@ -1,4 +1,4 @@
-# EasyPermission
+# PermssionHelper
   真正的好用的权限申请库，无需依赖其他第三方库，纯原生代码，调用方便
   
   # 特性
