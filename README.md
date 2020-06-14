@@ -16,7 +16,7 @@
     
     
     
-### 1.开篇：调用方视
+### 1.开篇：调用方式
   ``` kotlin
      PermissionHelper.Builder(this)
                 .addPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE, R.string.str_extraternal_permissioin)
@@ -72,7 +72,7 @@
     ``` 
     
     
-    ### 6.权限回调处理（开发者根据自己的业务做相应处理，这里这是示例c）
+   ### 6.权限回调处理（开发者根据自己的业务做相应处理，这里这是示例c）
      ``` kotlin
       private fun showDeniedPermissionDialog(deniedPermissions: ArrayList<PermissionBean>) {
         val stringBuilder = StringBuilder()
@@ -97,5 +97,6 @@
             .create()
             .show()
      ```
-    ### 结语
+   
+   ### 结语
       此开源库通过创建permissionFragment，在fragment中处理相应的权限，解决android原生调用繁琐的问题
