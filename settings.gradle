@@ -1,0 +1,3 @@
+rootProject.name='EasyPermission'
+include ':app'
+include ':permissioinlib'

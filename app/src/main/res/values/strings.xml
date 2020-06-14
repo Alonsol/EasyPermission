@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">EasyPermission</string>
+    <string name="str_extraternal_permissioin">外部存储权限</string>
+    <string name="str_camera_permission">摄像机</string>
+</resources>
