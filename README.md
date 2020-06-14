@@ -23,7 +23,7 @@
                 .requestPermission()
      亦或
      PermissionHelper.Builder(this)
-                .addPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                .addPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE, R.string.str_extraternal_permissioin)
                 .requestPermission(object : IPermissionResult {
                     override fun onGranted() {
                         Toast.makeText(this@MainActivity, "授权成功", Toast.LENGTH_SHORT).show()
