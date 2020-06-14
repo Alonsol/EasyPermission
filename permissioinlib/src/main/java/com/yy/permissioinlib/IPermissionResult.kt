@@ -10,7 +10,6 @@ interface IPermissionResult {
      */
     fun onGranted()
 
-
     /**
      * 申请失败
      * @param deniedPermissions 申请失败的权限集合
