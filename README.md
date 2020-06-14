@@ -16,12 +16,23 @@
     
     
     
-### 1.初始化权限申请
+### 1.开篇：调用方视
   ``` kotlin
      PermissionHelper.Builder(this)
                 .addPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE, R.string.str_extraternal_permissioin)
-                .addPermission(Manifest.permission.CAMERA, R.string.str_camera_permission)
                 .requestPermission()
+     亦或
+     PermissionHelper.Builder(this)
+                .addPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                .requestPermission(object : IPermissionResult {
+                    override fun onGranted() {
+                        Toast.makeText(this@MainActivity, "授权成功", Toast.LENGTH_SHORT).show()
+                    }
+
+                    override fun onDenied(deniedPermissions: ArrayList<PermissionBean>) {
+                        showDeniedPermissionDialog(deniedPermissions)
+                    }
+                })
   ```
  ### 2.申请单个权限
     ``` kotlin
