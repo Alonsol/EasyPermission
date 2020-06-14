@@ -22,6 +22,13 @@
                 .addPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE, R.string.str_extraternal_permissioin)
                 .requestPermission()
      亦或
+     
+     /**
+         *  申请动态权限
+         *  添加权限（权限个数支持动态添加 permissionName为字符串） addPermission(permission: String, permissionName: String? = null)
+         *  添加权限 （权限个数支持动态添加 resId：为资源id）  addPermission(permission: String, @StringRes resId: Int)
+         *  申请权限 requestPermission 带参数时回调申请结果 空参场景则指申请，不返回申请结果
+      */
      PermissionHelper.Builder(this)
                 .addPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE, R.string.str_extraternal_permissioin)
                 .requestPermission(object : IPermissionResult {
